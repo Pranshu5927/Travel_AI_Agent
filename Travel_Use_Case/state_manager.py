@@ -4,20 +4,22 @@ def initialize_state():
         "start_date": None,
         "end_date": None,
         "budget": None,
-        "preferences": None
+        "preferences": None,
+        "itinerary_generated": False,
+        "awaiting_feedback": False,
+        "itinerary_content": None
     }
 
 
 def update_state(state, extracted_info):
-    extracted_dict = extracted_info.dict()
+    data = extracted_info.dict()
 
-    for key, value in extracted_dict.items():
+    for key, value in data.items():
         if value:
             state[key] = value
 
     return state
 
 
-def is_ready_for_itinerary(state):
-    required_fields = ["destination", "start_date", "end_date"]
-    return all(state[field] for field in required_fields)
+def reset_state():
+    return initialize_state()
