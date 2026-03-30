@@ -4,8 +4,7 @@ A conversational travel planning assistant built with LangChain + GPT-4o-mini + 
 The agent maintains multi-turn conversation context, manages multiple concurrent trip plans,
 and generates structured day-by-day itineraries from natural language input.
 
-## Demo
-![hippo]Travel_Use_Case/public/Travel_Itinerary_Agent_v1.gif
+
 
 ## What it does
 - Accepts freeform travel requests ("5 days in Japan, April, $3000 budget, cultural focus")
